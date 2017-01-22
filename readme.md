@@ -12,3 +12,8 @@ This is particularly useful when you have code that runs on activation - deactiv
 ## Screenshots
 
 ![screenshot plugin action link](/assets/img/clickclick.png?raw=true)
+
+## Changelog
+
+* 22 Jan 2017
+* initial
