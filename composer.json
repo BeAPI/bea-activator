@@ -1,0 +1,13 @@
+{
+  "name": "bea/activator",
+  "description": "allows to quickly deactivate-reactivate a plugin, useful when adding stuffs on activation/deactivation hooks such as capabilities for roles.",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0",
+  "authors": [
+    {
+      "name": "BeAPI",
+      "email": "technique@beapi.fr"
+    }
+  ],
+  "type" : "wordpress-plugin"
+}
