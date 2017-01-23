@@ -1,5 +1,5 @@
 === Bea Activator ===
-Contributors: jmlapam
+Contributors: jmlapam, beapi
 Tags: plugin, activate, deactivate, utilities
 Requires at least: 2.8
 Tested up to: 4.7.1
@@ -26,6 +26,10 @@ This section describes how to install the plugin and get it working.
 1. Action link
 
 == Changelog ==
+
+= 0.2 =
+* 21 Jan 2017
+* fix MU compat
 
 = 0.1 =
 * 21 Jan 2017
