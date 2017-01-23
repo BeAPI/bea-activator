@@ -96,11 +96,12 @@ class Bea_Activator {
 
 		if ( is_multisite() ) {
 			activate_plugin( $plugin_file, null, true );
+			add_action( 'network_admin_notices', array( $this, 'add_notice' ) );
 		} else {
 			activate_plugin( $plugin_file );
+			add_action( 'admin_notices', array( $this, 'add_notice' ) );
 		}
 
-		add_action( 'network_admin_notices', array( $this, 'add_notice' ) );
 
 		return true;
 	}
