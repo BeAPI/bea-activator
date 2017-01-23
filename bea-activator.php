@@ -93,9 +93,14 @@ class Bea_Activator {
 
 		// MU inside
 		deactivate_plugins( $plugin_file );
-		activate_plugin( $plugin_file );
 
-		add_action( 'admin_notices', array( $this, 'add_notice' ) );
+		if ( is_multisite() ) {
+			activate_plugin( $plugin_file, null, true );
+		} else {
+			activate_plugin( $plugin_file );
+		}
+
+		add_action( 'network_admin_notices', array( $this, 'add_notice' ) );
 
 		return true;
 	}
@@ -114,7 +119,7 @@ class Bea_Activator {
 			'action'      => 'full_contact',
 			'plugin_file' => plugin_basename( $plugin_file ),
 		),
-			admin_url( 'plugins.php' )
+			network_admin_url( 'plugins.php' ) // will be admin_url() on single installations
 		);
 
 		return array_merge(
