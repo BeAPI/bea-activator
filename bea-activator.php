@@ -1,7 +1,7 @@
 <?php
 /*
 * Plugin Name: BEA Activator
-* Version: 0.1
+* Version: 0.2
 * Author: Be API
 * License: GPL V3
 * Description: allows to quickly deactivate-activate a plugin, useful when adding stuffs on activation/deactivation hooks such as capabilities for roles.
