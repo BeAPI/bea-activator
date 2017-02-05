@@ -3,6 +3,8 @@
 Very simple WordPress plugin that allows you to quickly deactivate & reactivate a plugin with only 1 click !
 This is particularly useful when you have code that runs on activation - deactivation hook.
 
+This plugin can be downloaded on wordpress.org too : https://wordpress.org/plugins/bea-activator/
+
 ## How to install
 
 1. Install and activate this plugin
