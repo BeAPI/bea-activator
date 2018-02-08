@@ -1,13 +1,16 @@
 <?php
 /*
-* Plugin Name: BEA Activator
-* Version: 0.2
-* Author: Be API
-* License: GPL V3
-* Description: allows to quickly deactivate-activate a plugin, useful when adding stuffs on activation/deactivation hooks such as capabilities for roles.
-*
-----
-Copyright 2017 BE API Technical team (human@beapi.fr)
+ Plugin Name: BEA - Activator
+ Version: 1.0.0
+ Plugin URI: https://github.com/BeAPI/bea-activator
+ Description: Quickly deactivate & reactivate a plugin.
+ Author: Be API Technical team
+ Author URI: https://beapi.fr
+ Contributors: Julien Maury, Maxime Culea
+
+ --------
+
+ Copyright 2018 Be API Technical team (human@beapi.fr)
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -64,7 +67,6 @@ class Bea_Activator {
 	}
 
 	public function admin_init() {
-
 		// Load the textdomain
 		load_plugin_textdomain( 'bea-activator', false, basename( rtrim( dirname( __FILE__ ), '/' ) ) . '/lang' );
 
@@ -83,9 +85,7 @@ class Bea_Activator {
 		}
 
 		// nonce checking
-		if ( ! isset( $_GET['_wpnonce'] )
-		     || ! wp_verify_nonce( $_GET['_wpnonce'], 'full_contact' )
-		) {
+		if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( $_GET['_wpnonce'], 'full_contact' ) ) {
 			wp_die( __( 'cheatin’ uh ' ) );
 		}
 
@@ -101,7 +101,6 @@ class Bea_Activator {
 			activate_plugin( $plugin_file );
 			add_action( 'admin_notices', array( $this, 'add_notice' ) );
 		}
-
 
 		return true;
 	}
@@ -119,37 +118,29 @@ class Bea_Activator {
 		$url = add_query_arg( array(
 			'action'      => 'full_contact',
 			'plugin_file' => plugin_basename( $plugin_file ),
-		),
-			network_admin_url( 'plugins.php' ) // will be admin_url() on single installations
+		), network_admin_url( 'plugins.php' ) // will be admin_url() on single installations
 		);
 
-		return array_merge(
-			array( 'full_contact' => "<a href='" . wp_nonce_url( $url, 'full_contact' ) . "'>" . __( 'Deactivate & Reactivate', 'bea-activator' ) . "</a>" ),
-			$actions
-		);
+		return array_merge( array( 'full_contact' => "<a href='" . wp_nonce_url( $url, 'full_contact' ) . "'>" . __( 'Deactivate & Reactivate', 'bea-activator' ) . "</a>" ), $actions );
 	}
 
 	/**
 	 * Add link
+	 *
 	 * @return bool
 	 * @author Julien Maury
 	 */
 	public function add_links_to_list() {
-
 		if ( 'plugins.php' !== $GLOBALS['pagenow'] ) {
 			return false;
 		}
 
 		$all_plugins = $this->get_plugins_list();
-
 		foreach ( $all_plugins as $plugin ) {
-
 			if ( ! is_plugin_active( $plugin ) ) {
 				continue;
 			}
-
 			$this->add_link( $plugin );
-
 		}
 
 		return true;
@@ -164,29 +155,19 @@ class Bea_Activator {
 	 */
 	protected function add_link( $plugin ) {
 		if ( ! is_multisite() ) {
-			add_filter(
-				'plugin_action_links_' . plugin_basename( $plugin ),
-				array( $this, 'action_links' ),
-				10,
-				2
-			);
+			add_filter( 'plugin_action_links_' . plugin_basename( $plugin ), array( $this, 'action_links' ), 10, 2 );
 		} else {
-			add_filter(
-				'network_admin_plugin_action_links_' . plugin_basename( $plugin ),
-				array( $this, 'action_links' ),
-				10,
-				2
-			);
+			add_filter( 'network_admin_plugin_action_links_' . plugin_basename( $plugin ), array( $this, 'action_links' ), 10, 2 );
 		}
 	}
 
 	/**
 	 * Get all plugins
+	 *
 	 * @author Julien Maury
 	 * @return array
 	 */
 	protected function get_plugins_list() {
 		return array_keys( get_plugins() );
 	}
-
 }
