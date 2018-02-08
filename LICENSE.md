@@ -1,4 +1,4 @@
-BEA - Activator / Simply and quickly deactivate & reactivate a plugin.
+BEA - Activator / Quickly deactivate & reactivate a plugin.
 
 Copyright 2017-2018 Be API and contributors
 
@@ -19,7 +19,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 This program incorporates work covered by the following copyright and
 permission notices:
 
-  BEA - Activator / Simply and quickly deactivate & reactivate a plugin.
+  BEA - Activator / Quickly deactivate & reactivate a plugin.
 
   Copyright 2017-2018 Be API and contributors
 

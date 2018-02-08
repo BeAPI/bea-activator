@@ -3,7 +3,7 @@
  Plugin Name: BEA - Activator
  Version: 1.0.0
  Plugin URI: https://github.com/BeAPI/bea-activator
- Description: Simply and quickly deactivate & reactivate a plugin.
+ Description: Quickly deactivate & reactivate a plugin.
  Author: Be API Technical team
  Author URI: https://beapi.fr
  Contributors: Julien Maury, Maxime Culea

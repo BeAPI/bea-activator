@@ -1,6 +1,6 @@
 {
 	"name":"bea/activator",
-	"description":"Simply and quickly deactivate & reactivate a plugin.",
+	"description":"Quickly deactivate & reactivate a plugin.",
 	"keywords":[
 		"activate",
 		"deactivate",

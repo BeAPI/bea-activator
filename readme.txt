@@ -9,7 +9,7 @@ Stable tag: trunk
 License: GPLv3 or later
 License URI: https://github.com/BeAPI/bea-activator/blob/master/LICENSE.md
 
-Simply and quickly deactivate & reactivate a plugin.
+Quickly deactivate & reactivate a plugin.
 
 == Description ==
 
