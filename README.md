@@ -3,6 +3,7 @@
 # BEA - Activator
 
 Very simple WordPress plugin that allows you to quickly deactivate & reactivate a plugin with only 1 click !
+
 This is particularly useful when you have code that runs on activation - deactivation hook.
 
 # How ?
@@ -31,6 +32,7 @@ This is particularly useful when you have code that runs on activation - deactiv
 ## Features
 
 A link is added on the plugin's admin page : 
+
 ![screenshot plugin action link](/.wordpress.org/screenshot-1.png)
 
 ## Contributing
