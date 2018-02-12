@@ -1,7 +1,7 @@
 === BEA - Activator===
 Contributors: beapi, jmlapam, maximeculea
 Donate link: http://paypal.me/BeAPI
-Tags: "activate", "deactivate", "deactivation-hooks", "activation-hook"
+Tags: reactivate, plugin, activate, deactivate, deactivation-hooks, activation-hook
 Requires at least: 4.0
 Requires php: 5.4
 Tested up to: 4.9.3
