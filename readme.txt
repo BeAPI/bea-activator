@@ -1,10 +1,10 @@
-=== BEA - Activator===
-Contributors: beapi, jmlapam, maximeculea
+=== BEA - Activator ===
+Contributors: beapi, jmlapam, maximeculea, momo360modena
 Donate link: http://paypal.me/BeAPI
 Tags: reactivate, plugin, activate, deactivate, deactivation-hooks, activation-hook
 Requires at least: 4.0
 Requires php: 5.4
-Tested up to: 4.9.3
+Tested up to: 5.2
 Stable tag: trunk
 License: GPLv3 or later
 License URI: https://github.com/BeAPI/bea-activator/blob/master/LICENSE.md
